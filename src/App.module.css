@@ -1,0 +1,41 @@
+.cardWrapper {
+  container-type: inline-size;
+  width: 320px;
+  height: 484px !important;
+  resize: both;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  min-width: 320px;
+}
+.card {
+  border-radius: 4px;
+  @apply shadow-lg bg-white grid overflow-hidden;
+}
+.thumbnail {
+  min-height: 300px;
+  position: relative;
+}
+@container (min-width: 400px) {
+  .card {
+    grid-template-columns: 1fr 2fr;
+  }
+  .thumbnail {
+    min-height: auto;
+  }
+}
+
+.bg {
+  background-color: #dbdbdb;
+  opacity: 0.8;
+  background-image: radial-gradient(#6d6d6d 0.5px, #dbdbdb 0.5px);
+  background-size: 10px 10px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+}
